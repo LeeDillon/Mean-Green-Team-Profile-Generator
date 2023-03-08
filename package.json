@@ -1,0 +1,29 @@
+{
+  "name": "mean-green-team-profile-generator",
+  "version": "1.0.0",
+  "description": "## Your Task",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest --verbose test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeeDillon/Mean-Green-Team-Profile-Generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeeDillon/Mean-Green-Team-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/LeeDillon/Mean-Green-Team-Profile-Generator#readme",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  },
+  "dependencies": {
+    "inquirer": "^6.3.1"
+  }
+}
