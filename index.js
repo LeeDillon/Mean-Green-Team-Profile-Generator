@@ -38,7 +38,7 @@ function createManager() {
         }]).then((answers) => {
             const manager = new Manager(answers.name, answers.employeeID, answers.email, answers.officeNum);
             employeeArray.push(manager);
-            console.log(manager);
+            createEmployee();
         }
         )
 }
@@ -85,38 +85,27 @@ function createEmployee() {
             default: false
         }])
         .then((answers) => {
-            if (job === 'Engineer') {
+            if (answers.job === 'Engineer') {
                 const engineer = new Engineer(answers.name, answers.employeeID, answers.email, answers.github);
                 employeeArray.push(engineer);
                 console.log(engineer);
             }
-            else if (job === 'Intern') {
+            else if (answers.job === 'Intern') {
                 const intern = new Intern(answers.name, answers.employeeID, answers.email, answers.school);
                 employeeArray.push(intern);
                 console.log(intern);
             }
-            if (addExtraEmployee) {
-                return createEmployee(employeeArray);
+            if (answers.addExtraEmployee) {
+                return createEmployee();
             } else {
-                return employeeArray;
+                const htmlBlock = render(employeeArray);
+                fs.writeFileSync(outputPath, htmlBlock, "UTF-8");
             }
         }
         )
 }
 
 
-function initQuestions() {
-    createManager()
-        .then(createEmployee)
-        .then(employeeArray => {
-            return render(employeeArray);
-        })
-        .then(HTMLblock => {
-            return fs.writeFileSync(outputPath, HTMLblock, "UTF-8");
-        })
-        .catch(err => {
-            console.log(err);
-        });
-}
 
-initQuestions();
+createManager()
+
