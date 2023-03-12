@@ -2,6 +2,10 @@
 
 ## Description: This is a tool that accepts user input and dynamically generates cards on a html page for each employee.
 
+### Screenshots of tool:
+![image](https://user-images.githubusercontent.com/86656625/224545898-fac69e21-136c-44ef-be26-6f486680a0da.png)
+
+![image](https://user-images.githubusercontent.com/86656625/224545861-1363b353-cc80-4d16-900a-1ffb64700697.png)
 
 
 ### Table of Contents:
